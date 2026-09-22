@@ -1,0 +1,93 @@
+# =========================================================
+# whitestar_submit_for_robotmaster
+# 交作业用仓库（STM32 / Keil MDK / CubeMX / CLion）
+# 结构参考：26_RobotMaster_preview_storage/.gitignore
+# =========================================================
+
+# ===== 操作系统 =====
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+*~
+
+# ===== Office / WPS 临时与锁文件 =====
+~$*
+*.tmp
+.~lock.*#
+
+# ===== 编辑器 / IDE =====
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+
+# ===== 构建产物与依赖 =====
+node_modules/
+dist/
+build/
+out/
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+
+# ===== 日志 =====
+*.log
+logs/
+
+# ===== 编译中间文件（通用）=====
+*.o
+*.obj
+*.elf
+*.hex
+*.map
+*.lst
+
+# ===== STM32 / Keil MDK =====
+# 只提交工程本体 .uvprojx；个人界面布局与调试器配置不入库
+*.uvguix.*
+*.uvoptx
+*.uvproj.bak
+*.bak
+*.dep
+*.crf
+*.d
+*.axf
+*.iex
+*.sct
+*.lnp
+*.build_log.htm
+*.htm
+Objects/
+Listings/
+DebugConfig/
+RTE/
+
+# ===== STM32CubeMX / CLion / CMake =====
+.mxproject
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+
+# ===== 大体积二进制文件（建议改用 Git LFS）=====
+*.zip
+*.7z
+*.rar
+*.iso
+*.exe
+*.msi
+*.dmg
+
+# ===== 本地配置（可能含敏感信息）=====
+.env
+.env.local
+*.local
+secrets/
